@@ -25,7 +25,7 @@ const styles = theme => ({
   },
   avatar: {
     margin: "0 1em 1em",
-    borderRadius: "20% 100% 100% 100%",
+    borderRadius: "50% 100% 100% 100%",
     boxShadow: "2px 8px 20px -6px hsla(170, 50%, 45%, 1)",
     width: "60px",
     height: "60px",

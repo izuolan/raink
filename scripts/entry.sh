@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 export GATSBY_DIR="/site"
 
@@ -23,8 +23,10 @@ elif [ "$1" == "serve" ]; then
   gatsby serve --port 8000
 elif [ "$1" == "deploy" ]; then
   gatsby build
-  generate-app-icons.sh
-  # monitor
+  bash /generate-app-icons.sh
+  while true; do
+    find content/ | entr sh -c 'gatsby build'
+  done
 else
   exec $@
 fi

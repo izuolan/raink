@@ -1,6 +1,6 @@
 # Raink - Personal blog starter for Gatsby
 
-## Preview and feature
+## 1. Preview and feature
 
 [Demo](https://zuolan.me/)
 
@@ -23,49 +23,79 @@ Later
 * [ ] multi-language
 * [ ] Disqus and FB comments
 
-## Getting started
+## 2. Getting started
 
 There are various ways to get started with **Raink**:
 
-<details><summary>Deploying with Netlify</summary><br>
-Fork this project, and deploy to [Netlify](https://www.netlify.com/).
-<br>
-<br>
+<details><summary>Deploying from Source</summary>
+
+```shell
+$ git clone https://github.com/izuolan/raink.git && cd $_
+$ npm install --global gatsby-cli
+$ yarn install
+$ yarn develop
+```
+
 </details>
 
-<details><summary>Deploying with Docker</summary><br>
-NOTE: Your GatsbyJS site will be created into `$(pwd)/site` automatically.
+<details><summary>Deploying with Netlify</summary>
+
+Fork this project, and deploy to [Netlify](https://www.netlify.com/).
+
+</details>
+
+<details><summary>Deploying with Docker</summary>
+
+NOTE: Your GatsbyJS site static files will be created into `~/raink/public` automatically.
+
+Clone this repository:
 
 ```
-# develop
-docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 zuolan/gatsby develop
-
-# build
-docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 zuolan/gatsby build
-
-# serve
-docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 zuolan/gatsby serve
-
-# other
-docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 zuolan/gatsby <YOUR COMMAND>
+$ git clone https://github.com/izuolan/raink.git ~/raink
 ```
+
+#### develop
+
+Use `develop` command to deploying your site, then open `SERVER_IP:8000`:
+
+```shell
+$ docker run -it --rm -p 8000:8000 -v ~/raink:/site zuolan/raink develop
+```
+
+#### build and serve
+
+Use `build` command to building your site, then the static files will output the `public` folder:"
+
+```shell
+$ docker run -it --rm -v ~/raink:/site zuolan/raink build
+```
+
+Use `serve` command to run a http serve:
+
+```shell
+$ docker run -dit --name raink -p 8000:8000 -v ~/raink:/site zuolan/raink serve
+```
+
+#### deploy
+
+This command will be build your site and generate app icons, and run a monitor to monitoring the `content` folder, automatically build and redeploy when file changes:
+
+```shell
+$ docker run -dit --name raink -v ~/raink:/site zuolan/raink deploy
+```
+
+#### other
 
 For example to install a new NPM-module:
 
 ```
-docker run -it --rm -v $(pwd)/site:/site aripalo/gatsby-docker yarn add gatsby-transformer-yaml
+$ docker run -it --rm -v ~/raink:/site zuolan/raink yarn add gatsby-transformer-yaml
 ```
-<br>
-<br>
+
 </details>
 
-<details><summary>Deploying from Source</summary><br>
-Later
-<br>
-<br>
-</details>
+<details><summary>Enable external services</summary>
 
-<details><summary>Enable external services</summary><br>
 The starter uses external services for some functions: contact form, comments, searching, analytics. To use them you have to secure some access data. No worries, all services are free or have generous free tiers big enough for a personal blog.
 
 The starter needs an `.env` file like this in the root folder
@@ -81,8 +111,7 @@ DISQUS = ...
 ```
 
 The contact form does not need any settings it should work out of the box if you deploy the website to [Netlify](https://www.netlify.com/).
-<br>
-<br>
+
 </details>
 
 ## Dashboard

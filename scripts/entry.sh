@@ -1,9 +1,6 @@
 #!/bin/sh
 set -e
-
 export GATSBY_DIR="/site"
-# export PATH="$PATH:/usr/local/bin/gatsby"
-# /usr/bin/gatsby
 
 # Initialize Gatsby or run NPM install if needed
 if [ ! -f "$GATSBY_DIR/package.json" ]; then
@@ -18,21 +15,16 @@ cd $GATSBY_DIR
 yarn clean
 
 # Decide what to do
-while [ -n "$1" ]; do
-  case "$1" in
-    develop)
-        gatsby develop --host 0.0.0.0;;
-    build)
-        gatsby build
-        generate-app-icons.sh
-    ;;
-    serve)
-        gatsby build
-        gatsby serve --port 8000
-    ;;
-    *)
-        echo "develop, build or serve"
-        exit 1;;
-  esac
-  shift
-done
+if [ "$1" == "develop" ]; then
+  gatsby develop --host 0.0.0.0
+elif [ "$1" == "build" ]; then
+  gatsby build
+elif [ "$1" == "serve" ]; then
+  gatsby serve --port 8000
+elif [ "$1" == "deploy" ]; then
+  gatsby build
+  generate-app-icons.sh
+  # monitor
+else
+  exec $@
+fi

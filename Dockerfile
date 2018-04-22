@@ -1,15 +1,18 @@
-# https://github.com/aripalo/gatsby-docker
 FROM node:alpine
 
-RUN apk update && \
-    apk add --update --repository http://dl-3.alpinelinux.org/alpine/edge/testing vips-tools vips-dev fftw-dev gcc g++ make libc6-compat && \
+RUN npm install --global gatsby-cli && \
+    apk update && \
     apk add --no-cache git python && \
-    rm -rf /var/cache/apk/* && mkdir -p /site && \
-    npm install --global gatsby-cli
+    apk add --no-cache --update \
+        --repository http://dl-3.alpinelinux.org/alpine/edge/testing \
+        gcc g++ make \
+        vips-tools vips-dev \
+        fftw-dev libc6-compat && \
+    rm -rf /var/cache/apk/* && \
+    mkdir -p /site
 
-# npm install --global gatsby --no-optional gatsby@1.9
 WORKDIR /site
-VOLUME /site
+VOLUME ["/site"]
 EXPOSE 8000
 COPY scripts/*.sh /
 

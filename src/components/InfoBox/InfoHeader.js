@@ -45,7 +45,7 @@ const styles = theme => ({
     height: "36px",
     backgroundColor: "#FFFFFF",
     borderRadius: "20% 100% 100% 100%",
-    boxShadow: "2px 8px 20px -6px hsla(170, 50%, 45%, 1)",
+    // boxShadow: "2px 8px 20px -6px hsla(170, 50%, 45%, 1)",
     border: "1px solid #ddd",
     transition: "all .3s",
     transitionTimingFunction: "ease",
@@ -65,7 +65,7 @@ const styles = theme => ({
     "@media (hover: hover)": {
       "&:hover": {
         borderRadius: "20% 100% 100% 100%",
-        boxShadow: "2px 8px 40px -6px hsla(170, 50%, 45%, 1)"
+        // boxShadow: "2px 8px 40px -6px hsla(170, 50%, 45%, 1)"
       }
     }
   },

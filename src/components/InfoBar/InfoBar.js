@@ -43,6 +43,9 @@ const styles = theme => ({
       margin: "2px 0 0 0"
     }
   },
+  titleLink: {
+    marginTop: "4px"
+  },
   avatarLink: {
     display: "block",
     float: "left",
@@ -69,10 +72,12 @@ class InfoBar extends React.Component {
         <Link to="/" className={classes.avatarLink} onClick={this.homeLinkOnClick}>
           <Avatar alt={config.infoTitle} src={avatar} className={classes.avatar} />
         </Link>
-        <h3 className={classes.title}>
-          {config.infoTitle}
-          <small>{config.infoTitleNote}</small>
-        </h3>
+        <Link to="/" className={classes.titleLink} onClick={this.homeLinkOnClick}>
+          <h3 className={classes.title}>
+            {config.infoTitle}
+            <small>{config.infoTitleNote}</small>
+          </h3>
+        </Link>
         <TopMenu
           pages={pages}
           homeLinkOnClick={this.homeLinkOnClick}

@@ -46,12 +46,13 @@ Fork this project, and deploy to [Netlify](https://www.netlify.com/).
 
 <details><summary>Deploying with Docker</summary>
 
-NOTE: Your GatsbyJS site static files will be created into `~/raink/public` automatically.
+NOTE: **Not recommended this way, it has some issues.** Your GatsbyJS site static files will be created into `~/raink/public` automatically.
 
 Clone this repository:
 
 ```
-$ git clone https://github.com/izuolan/raink.git ~/raink
+$ git clone https://github.com/izuolan/raink.git cd $_
+$ docker build -t your/raink .
 ```
 
 #### develop
@@ -59,7 +60,7 @@ $ git clone https://github.com/izuolan/raink.git ~/raink
 Use `develop` command to deploying your site, then open `SERVER_IP:8000`:
 
 ```shell
-$ docker run -it --rm -p 8000:8000 -v ~/raink:/site zuolan/raink develop
+$ docker run -it --rm -p 8000:8000 -v ~/raink:/site your/raink develop
 ```
 
 #### build and serve
@@ -67,13 +68,13 @@ $ docker run -it --rm -p 8000:8000 -v ~/raink:/site zuolan/raink develop
 Use `build` command to building your site, then the static files will output the `public` folder:"
 
 ```shell
-$ docker run -it --rm -v ~/raink:/site zuolan/raink build
+$ docker run -it --rm -v ~/raink:/site your/raink build
 ```
 
 Use `serve` command to run a http serve:
 
 ```shell
-$ docker run -dit --name raink -p 8000:8000 -v ~/raink:/site zuolan/raink serve
+$ docker run -dit --name raink -p 8000:8000 -v ~/raink:/site your/raink serve
 ```
 
 #### deploy
@@ -81,7 +82,7 @@ $ docker run -dit --name raink -p 8000:8000 -v ~/raink:/site zuolan/raink serve
 This command will be build your site and generate app icons, and run a monitor to monitoring the `content` folder, automatically build and redeploy when file changes:
 
 ```shell
-$ docker run -dit --name raink -v ~/raink:/site zuolan/raink deploy
+$ docker run -dit --name raink -v ~/raink:/site your/raink deploy
 ```
 
 #### other
@@ -89,7 +90,7 @@ $ docker run -dit --name raink -v ~/raink:/site zuolan/raink deploy
 For example to install a new NPM-module:
 
 ```
-$ docker run -it --rm -v ~/raink:/site zuolan/raink yarn add gatsby-transformer-yaml
+$ docker run -it --rm -v ~/raink:/site your/raink yarn add gatsby-transformer-yaml
 ```
 
 </details>

@@ -52,7 +52,7 @@ const styles = theme => ({
     //   height: 100,
     // },
     '&:hover': {
-      zIndex: 1,
+      zIndex: 0,
     },
     '&:hover $imageBackdrop': {
       opacity: 0.6,

@@ -103,7 +103,7 @@ const PostHeader = props => {
       <h1 className={classes.title}>{title}</h1>
       <h2 className={classes.subTitle}>{subTitle}</h2>
       <div className={classes.meta}>
-        <Chip avatar={<Avatar src={avatar} />} label={postDate(date)} />
+        <Chip avatar={<Avatar alt="avatar" src={avatar} />} label={postDate(date)} />
         {tags.map(data => {
           return (
             <Chip

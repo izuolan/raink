@@ -7,7 +7,7 @@ module.exports = {
   siteUrl: "https://zuolan.me",
   pathPrefix: "",
   siteImage: "favicon.png",
-  siteLanguage: "zh_CN",
+  siteLanguage: "zh-CN",
   // author
   authorName: "左蓝",
   authorEmail: "i@zuolan.me",

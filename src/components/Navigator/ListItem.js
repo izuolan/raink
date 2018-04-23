@@ -165,7 +165,10 @@ class ListItem extends React.Component {
                     srcSet={post.node.frontmatter.cover.children[0].resolutions.srcSetWebp}
                   />
                   <source srcSet={post.node.frontmatter.cover.children[0].resolutions.srcSet} />
-                  <img src={post.node.frontmatter.cover.children[0].resolutions.src} alt="" />
+                  <img
+                    src={post.node.frontmatter.cover.children[0].resolutions.src}
+                    alt={post.node.frontmatter.title}
+                  />
                 </picture>
             )}
             </LazyLoad>

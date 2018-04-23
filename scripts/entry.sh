@@ -14,19 +14,10 @@ elif [ ! -e "$GATSBY_DIR/node_modules/" ]; then
   yarn install
 fi
 
-# Separate the site and content folder
-if [ -f "/content/meta/config.js" ]; then
-  echo "Raink: Found config.js, Create symlinks."
-  echo $Separator
-  rm -rf /site/content
-  ln -s /content /site/content
-fi
-
 cd $GATSBY_DIR
 yarn clean
 echo "Raink: Initialized."
 echo $Separator
-
 
 # Decide what to do
 if [ "$1" == "develop" ]; then
@@ -43,7 +34,7 @@ elif [ "$1" == "deploy" ]; then
   echo "Raink: Build success, now monitoring content folder."
   echo $Separator
   while true; do
-    find content/ | entr sh -c 'gatsby build'
+    find /content | entr sh -c 'rm -rf /site/content && cp -r /content /site/content && gatsby build'
   done
 else
   exec $@

@@ -1,5 +1,4 @@
 module.exports = {
-  background: "#FFFFFF",
   light_bg: "#F0F0D8",
   light_base_text: "#333333",
   light_accent: "#58B2DC",

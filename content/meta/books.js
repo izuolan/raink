@@ -1,5 +1,3 @@
-const colors = require("../../src/styles/colors");
-
 module.exports = {
   description: "本页记录了我每个月阅读过的书籍。",
   lists: [

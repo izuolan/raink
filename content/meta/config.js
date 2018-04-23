@@ -22,8 +22,8 @@ module.exports = {
   manifestName: "左蓝的博客",
   manifestShortName: "Zuolan", // max 12 characters
   manifestStartUrl: "/",
-  manifestBackgroundColor: colors.bg,
-  manifestThemeColor: colors.bg,
+  manifestBackgroundColor: "#FFFFFF",
+  manifestThemeColor: "#FFFFFF",
   manifestDisplay: "standalone",
   // social
   authorSocialLinks: [

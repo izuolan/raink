@@ -14,7 +14,8 @@
     "lint-errors": "eslint src/**/*.{js,jsx} --quiet",
     "lint": "eslint src/**/*.{js,jsx}",
     "generate-app-icons": "sh ./scripts/generate-app-icons.sh",
-    "clean": "rm -rf .cache public static/icons"
+    "clean": "rm -rf .cache public static/icons",
+    "deploy": "yarn build && yarn generate-app-icons"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

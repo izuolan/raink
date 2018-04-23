@@ -50,7 +50,7 @@ The contact form does not need any settings it should work out of the box if you
 
 #### There are various ways to get started with Raink:
 
-<details open><summary>Deploying with Docker (Recommended)</summary>
+<details><summary>Deploying with Docker (Recommended)</summary>
 
 NOTE: Your GatsbyJS site static files will be created into `~/raink/public` automatically.
 

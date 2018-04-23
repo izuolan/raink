@@ -1,18 +1,32 @@
 #!/bin/bash
 set -e
 export GATSBY_DIR="/site"
+Separator="============================================================="
 
 # Initialize Gatsby or run NPM install if needed
 if [ ! -f "$GATSBY_DIR/package.json" ]; then
-  echo "package.json not found, check your docker command and volume."
+  echo "Raink: package.json not found, check your docker command and volume."
+  echo $Separator
   exit 1
 elif [ ! -e "$GATSBY_DIR/node_modules/" ]; then
-  echo "Node modules is empty. Running yarn install..."
+  echo "Raink: Node modules is empty. Running yarn install..."
+  echo $Separator
   yarn install
+fi
+
+# Separate the site and content folder
+if [ -f "/content/meta/config.js" ]; then
+  echo "Raink: Found config.js, Create symlinks."
+  echo $Separator
+  rm -rf /site/content
+  ln -s /content /site/content
 fi
 
 cd $GATSBY_DIR
 yarn clean
+echo "Raink: Initialized."
+echo $Separator
+
 
 # Decide what to do
 if [ "$1" == "develop" ]; then
@@ -22,8 +36,12 @@ elif [ "$1" == "build" ]; then
 elif [ "$1" == "serve" ]; then
   gatsby serve --port 8000
 elif [ "$1" == "deploy" ]; then
-  gatsby build
+  echo "Raink: Generate app icons."
+  echo $Separator
   bash /generate-app-icons.sh
+  gatsby build
+  echo "Raink: Build success, now monitoring content folder."
+  echo $Separator
   while true; do
     find content/ | entr sh -c 'gatsby build'
   done

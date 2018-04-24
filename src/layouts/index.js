@@ -26,10 +26,7 @@ const InfoBox = asyncComponent(
         return module;
       })
       .catch(error => {}),
-  <Loading
-    overrides={{ width: `${theme.info.sizes.width}px`, height: "100vh", right: "auto" }}
-    afterRight={true}
-  />
+  <Loading />
 );
 
 class Layout extends React.Component {
@@ -90,7 +87,6 @@ class Layout extends React.Component {
       <MuiThemeProvider theme={theme}>
         <div
           style={{
-            padding: "1px",
             position: "absolute",
             top: 0,
             left: 0,

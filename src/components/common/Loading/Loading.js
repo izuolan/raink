@@ -1,52 +1,53 @@
-import React from "react";
-import PropTypes from "prop-types";
-import injectSheet from "react-jss";
-import { CircularProgress } from "material-ui/Progress";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import { LinearProgress } from 'material-ui/Progress';
 
-const styles = theme => ({
-  loading: {
-    display: "flex",
-    background: props =>
-      props.overrides && props.overrides.background
-        ? props.overrides.background
-        : theme.base.colors.background.color,
-    position: "absolute",
-    left: props => (props.overrides && props.overrides.left ? props.overrides.left : 0),
-    right: props => (props.overrides && props.overrides.right ? props.overrides.right : 0),
-    top: "0",
-    width: props => (props.overrides && props.overrides.width ? props.overrides.width : "100%"),
-    height: props => (props.overrides && props.overrides.height ? props.overrides.height : "100%"),
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    "&::after": {
-      content: props => (props.afterLeft || props.afterRight ? `""` : ``),
-      position: "absolute",
-      right: props => (props.afterRight ? 0 : ""),
-      left: props => (props.afterLeft ? 0 : ""),
-      top: theme.base.sizes.linesMargin,
-      bottom: theme.base.sizes.linesMargin,
-      width: 0,
-      borderRight: `1px solid ${theme.base.colors.lines}`
-    }
+const styles = {
+  root: {
+    position: 'relative',
+    overflow: 'hidden',
+    height: 2,
   },
-  progress: {}
-});
-
-const Loading = props => {
-  const { classes, progressSize } = props;
-
-  return (
-    <div className={classes.loading}>
-      <CircularProgress className={classes.progress} size={progressSize ? progressSize : 30} />
-    </div>
-  );
 };
+
+class Loading extends React.Component {
+  state = {
+    completed: 0,
+  };
+
+  componentDidMount() {
+    this.timer = setInterval(this.progress, 500);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  timer = null;
+
+  progress = () => {
+    const { completed } = this.state;
+    if (completed === 100) {
+      this.setState({ completed: 0 });
+    } else {
+      const diff = Math.random() * 10;
+      this.setState({ completed: Math.min(completed + diff, 100) });
+    }
+  };
+
+  render() {
+    const { classes } = this.props;
+    return (
+      <div className={classes.root}>
+        <LinearProgress variant="determinate" value={this.state.completed} />
+      </div>
+    );
+  }
+}
 
 Loading.propTypes = {
   classes: PropTypes.object.isRequired,
-  progressSize: PropTypes.number,
-  overrides: PropTypes.object
 };
 
-export default injectSheet(styles)(Loading);
+export default withStyles(styles)(Loading);Loading

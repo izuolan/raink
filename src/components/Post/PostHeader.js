@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import Chip from 'material-ui/Chip';
 import Avatar from 'material-ui/Avatar';
-import avatar from "../../images/avatar.png";
+import avatar from "../../images/avatar.svg";
 
 import lang from "../../../content/meta/lang";
 

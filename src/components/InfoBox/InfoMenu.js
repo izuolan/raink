@@ -70,7 +70,7 @@ const InfoMenu = props => {
           <Button href={config.noteUrl} className={classes.buttonLeft}>
             <LibraryBooksIcon className={classes.buttonIcons} />{lang.note}
           </Button>
-          <Button href="/about" className={classes.buttonLeft} onClick={linkOnClick} data-shape="closed">
+          <Button href={config.aboutUrl} className={classes.buttonLeft} onClick={linkOnClick} data-shape="closed">
             <AccountBoxIcon className={classes.buttonIcons} />{lang.about}
           </Button>
         </Grid>
@@ -86,12 +86,12 @@ const InfoMenu = props => {
           <Button href={config.booksUrl} className={classes.buttonRight} onClick={linkOnClick} data-shape="closed">
             <BookIcon className={classes.buttonIcons} />{lang.books}
           </Button>
-          <Button href="/friends" className={classes.buttonRight} onClick={linkOnClick} data-shape="closed">
+          <Button href={config.friendsUrl} className={classes.buttonRight} onClick={linkOnClick} data-shape="closed">
             <SupervisorAccountIcon className={classes.buttonIcons} />{lang.friends}
           </Button>
         </Grid>
       </Grid>
-      <Button href="/contact" className={classes.buttonCenter} onClick={linkOnClick} data-shape="closed">
+      <Button href={config.contactUrl} className={classes.buttonCenter} onClick={linkOnClick} data-shape="closed">
         <HelpIcon className={classes.buttonIcons} />{lang.contact}
       </Button>
       {/* <Link to="/contact/" onClick={linkOnClick} className={classes.link} data-shape="closed">

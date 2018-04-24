@@ -6,7 +6,7 @@ import IconButton from "material-ui/IconButton";
 
 import ExpandMoreIcon from "material-ui-icons/ExpandMore";
 
-import avatar from "../../images/avatar.png";
+import avatar from "../../images/avatar.svg";
 import config from "../../../content/meta/config";
 import lang from "../../../content/meta/lang";
 

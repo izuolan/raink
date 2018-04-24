@@ -34,7 +34,7 @@ elif [ "$1" == "deploy" ]; then
   echo "Raink: Build success, now monitoring content folder."
   echo $Separator
   while true; do
-    find /content | entr sh -c 'rm -rf /site/content && cp -r /content /site/content && gatsby build'
+    find content | entr sh -c 'gatsby build'
   done
 else
   exec $@

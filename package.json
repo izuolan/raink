@@ -3,7 +3,7 @@
   "description": "Raink is a Gatsby starter for a personal blog",
   "author": "Zuolan <i@zuolan.me>",
   "repository": "https://github.com/izuolan/raink",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",

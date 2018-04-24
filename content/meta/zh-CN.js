@@ -46,4 +46,6 @@ module.exports = {
     published_yesterday: "本文于昨天发布",
     published_three_days: "本文于前天发布",
     over_date: "本文自发布日起已经超过100天，文章信息可能已经过时，请酌情阅读。",
+    share_before: "分享",
+    share_after: "到其他地方",
 }

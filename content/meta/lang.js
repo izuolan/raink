@@ -29,7 +29,7 @@ module.exports = {
     search_by: "Search by",
     search: "Search",
     // Contact
-    email_to_me: "You can contact me via email:",
+    email_to_me: "You can contact me via email: ",
     contact_desc: "You can also contact me via my Telegram (https://t.me/zuolan), or contact me directly using the form below:",
     send: "Send",
     network_error: "Network error",
@@ -47,5 +47,5 @@ module.exports = {
     published_three_days: "Published 3 days ago",
     over_date: "This post has been over 100 days since the date of publication.",
     share_before: "Share",
-    share_after: "to",   
+    share_after: "to",
 }

@@ -15,7 +15,10 @@ module.exports = {
   infoTitleNote: "Personal Blog",
   noteUrl: "https://note.zuolan.me", // Your notebook url
   resumeUrl: "", // Your resume url
-  booksUrl: "/books", // Your bookshelf url
+  booksUrl: "/books/", // Your bookshelf url
+  aboutUrl: "/about/", // Your about url
+  friendsUrl: "/friends/", // Your friends url
+  contactUrl: "/contact/", // Your contact url
   // manifest.json
   manifestName: "Zuolan's Blog",
   manifestShortName: "Zuolan", // max 12 characters

@@ -1,25 +1,23 @@
-const colors = require("../../src/styles/colors");
-
 module.exports = {
-  siteTitle: "左蓝 - 我将开口", // <title>
-  shortSiteTitle: "左蓝的博客", // <title> ending for posts and pages
-  siteDescription: "左蓝的个人博客，记录个人日常的生活以及学习经验。",
+  siteTitle: "Zuolan - Zuolan's Blog", // <title>
+  shortSiteTitle: "Zuolan's Blog", // <title> ending for posts and pages
+  siteDescription: "This is Zuolan's personal blog",
   siteUrl: "https://zuolan.me",
   pathPrefix: "",
   siteImage: "favicon.png",
   siteLanguage: "zh-CN",
   // author
-  authorName: "左蓝",
+  authorName: "Zuolan",
   authorEmail: "i@zuolan.me",
   authorTwitterAccount: "izuolan", // SEO and share
   // info
-  infoTitle: "左蓝",
-  infoTitleNote: "我将开口",
+  infoTitle: "Zuolan",
+  infoTitleNote: "Personal Blog",
   noteUrl: "https://note.zuolan.me", // Your notebook url
   resumeUrl: "", // Your resume url
   booksUrl: "/books", // Your bookshelf url
   // manifest.json
-  manifestName: "左蓝的博客",
+  manifestName: "Zuolan's Blog",
   manifestShortName: "Zuolan", // max 12 characters
   manifestStartUrl: "/",
   manifestBackgroundColor: "#FFFFFF",

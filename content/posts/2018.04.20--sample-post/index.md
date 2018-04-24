@@ -1,10 +1,12 @@
 ---
-title: 示例文章
-subTitle: 示例副标题
-category: "博客"
-tags: ["博客", "主题", "Gatsby.js", "Raink"]
+title: Sample post title
+subTitle: Sample post subtitle
+category: "Blog"
+tags: ["Blog", "Theme", "Gatsby.js", "Raink"]
 cover: cover.png
 ---
+
+# Source: [Raink](https://github.com/izuolan/raink)
 
 # Headers
 

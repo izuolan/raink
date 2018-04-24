@@ -1,6 +1,6 @@
 ---
-title: 我的邻居
-menuTitle: 邻居们
+title: My Friends
+menuTitle: Friends
 ---
 
 Ok, my friends.

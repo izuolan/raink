@@ -75,7 +75,7 @@ class PostShare extends React.Component {
 
     return (
       <div className={classes.stack}>
-        <h5 className={classes.header}>分享《{title}》到其他地方</h5>
+        <h5 className={classes.header}>{lang.share_before}《{title}》{lang.share_after}</h5>
         <div className={classes.qrcode}>
           {/* https://github.com/cssivision/qrcode-react#available-props */}
           <QRCode value={url}

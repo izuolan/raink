@@ -95,8 +95,7 @@ const styles = theme => ({
 
 class Books extends React.Component {
   state = {
-    // 获取时间
-    expanded: "在读",
+    expanded: lang.reading,
   };
 
   handleChange = panel => (event, expanded) => {

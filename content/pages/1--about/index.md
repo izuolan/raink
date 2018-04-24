@@ -1,6 +1,6 @@
 ---
-title: 关于
-menuTitle: 关于我
+title: About Me
+menuTitle: About
 ---
 
 Ok, about me.

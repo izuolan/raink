@@ -1,6 +1,6 @@
 # Raink - Personal blog starter for Gatsby.js
 
-[中文说明](https://zuolan.me/Raink主题发布/)
+[Chinese README](README_CN.md)
 
 ## Preview and feature
 
@@ -17,7 +17,7 @@ Later
 * [x] Themes switch (dark and light)
 * [x] Contact form
 * [x] Searching (by Algolia)
-* [x] PWA (Support notification)
+* [x] Progressive Web App (PWA)
 * [x] Favicons generator
 * [x] RSS, Sitemap, SEO
 * [x] Social sharing
@@ -25,6 +25,9 @@ Later
 * [ ] Filtering by tag
 * [ ] multi-language
 * [ ] Disqus and FB comments
+* [ ] Support PWA notification
+* [ ] Resume page
+* [ ] Dashboard
 
 ## Getting started
 
@@ -65,9 +68,12 @@ $ git clone https://github.com/izuolan/raink.git ~/raink && cd $_
 This command will be build your site and generate app icons, then run a monitor to monitoring the `content` folder, automatically build and redeploy when file changes:
 
 ```shell
-$ docker run -dit --restart=always --name raink -v ~/raink:/site zuolan/raink deploy
+$ docker run -dit --restart=always --name raink \
+    -v ~/raink:/site \
+    -v ~/content:/site/content \
+    zuolan/raink deploy
 
-# See container build log
+# Check the container build log
 $ docker logs -f raink
 ```
 
@@ -78,21 +84,31 @@ Now, everything is ready, you can host the `~/raink/public` folder to any http s
 Use `develop` command to deploying your site, then open `SERVER_IP:8000`:
 
 ```shell
-$ docker run -it --rm -p 8000:8000 -v ~/raink:/site zuolan/raink develop
+$ docker run -it --rm -p 8000:8000 \
+    -v ~/raink:/site \
+    -v ~/content:/site/content \
+    zuolan/raink develop
 ```
 
 #### build and serve
 
-Use `build` command to building your site, then the static files will output the `public` folder:"
+Use `build` command to building your site, then the static files will output the `public` folder:
 
 ```shell
-$ docker run -it --rm -v ~/raink:/site zuolan/raink build
+$ docker run -it --rm \
+    -v ~/raink:/site \
+    -v ~/content:/site/content \
+    zuolan/raink build
 ```
 
 Use `serve` command to run a http serve:
 
 ```shell
-$ docker run -dit --name raink -p 8000:8000 -v ~/raink:/site zuolan/raink serve
+$ docker run -dit --name raink-public \
+    -p 8000:8000 \
+    -v ~/raink:/site \
+    -v ~/content:/site/content \
+    zuolan/raink serve
 ```
 
 #### other
@@ -100,7 +116,10 @@ $ docker run -dit --name raink -p 8000:8000 -v ~/raink:/site zuolan/raink serve
 For example to install a new NPM-module:
 
 ```
-$ docker run -it --rm -v ~/raink:/site zuolan/raink yarn add gatsby-transformer-yaml
+$ docker run -it --rm \
+    -v ~/raink:/site \
+    -v ~/content:/site/content \
+    zuolan/raink yarn add gatsby-transformer-yaml
 ```
 
 </details>

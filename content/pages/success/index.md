@@ -1,5 +1,5 @@
 ---
-title: 发送成功
+title: Send success
 ---
 
-感谢您的来信，我将尽快回复您的信息。
+Thank you for your messages and I will reply to your message as soon as possible.

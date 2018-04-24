@@ -1,22 +1,24 @@
+const lang = require("./lang");
+
 module.exports = {
-  description: "本页记录了我每个月阅读过的书籍。",
+  description: "This page records the books I have read every month.",
   lists: [
     {
-      time: "在读",
-      summary: "总结文字很长很长很长很长很长很长很长很长很长很长很长很长很长的示例",
+      time: lang.reading,
+      summary: "Summary text",
       books: [
         {
-          title: "书名1",
+          title: "Book one",
           cover: "https://img3.doubanio.com/lpic/s28268070.jpg",
           url: "https://github.com/izuolan"
         },
         {
-          title: "书名2",
+          title: "Book two",
           cover: "https://img3.doubanio.com/lpic/s28268070.jpg",
           url: "https://github.com/izuolan"
         },
         {
-          title: "书名3",
+          title: "Book three",
           cover: "https://img3.doubanio.com/lpic/s28268070.jpg",
           url: "https://github.com/izuolan"
         },

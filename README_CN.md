@@ -9,7 +9,9 @@
 
 <details><summary>截图</summary>
 
-稍后补上
+Lighthouse 评分：
+
+![Lighthouse](https://i.imgur.com/QeO8Gh8.jpg)
 
 </details>
 

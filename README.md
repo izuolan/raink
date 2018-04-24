@@ -9,7 +9,9 @@
 
 <details><summary>Screenshots</summary>
 
-Later
+Lighthouse score:
+
+![Lighthouse](https://i.imgur.com/QeO8Gh8.jpg)
 
 </details>
 

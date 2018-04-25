@@ -16,6 +16,7 @@ Lighthouse 评分：
 </details>
 
 * [x] 文章和页面使用 Markdown 编写
+* [x] 文章目录
 * [x] 主题切换（目前只有黑白两种）
 * [x] 联系表单
 * [x] 搜索（基于 Algolia）

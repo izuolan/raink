@@ -16,6 +16,7 @@ Lighthouse score:
 </details>
 
 * [x] Markdown posts, pages and fragments
+* [x] Table of contents
 * [x] Themes switch (dark and light)
 * [x] Contact form
 * [x] Searching (by Algolia)

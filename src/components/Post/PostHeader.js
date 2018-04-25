@@ -85,8 +85,7 @@ const PostHeader = props => {
   function postDate(dateString) {
     const dateObj = new Date(dateString);
     const localDate = dateObj.format("yyyy-MM-dd");
-// Published 30 days ago
-// Published yesterday
+
     if (ago === 0) {
       return <p>{lang.published_today}（{localDate}）</p>;
     } else if (ago === 1) {

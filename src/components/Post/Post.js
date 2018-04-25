@@ -5,6 +5,7 @@ import Article from "../Main/Article";
 import PostHeader from "./PostHeader";
 import Content from "../Main/Content";
 import PostFooter from "./PostFooter";
+import Contents from "./Contents";
 
 const Post = props => {
   const { post, author, slug, facebook } = props;
@@ -18,6 +19,7 @@ const Post = props => {
   return (
     <Article>
       <PostHeader title={title} subTitle={subTitle} date={date} tags={tags}/>
+      <Contents post={post} />
       <Content html={html} />
       <PostFooter author={author} post={post} slug={slug} facebook={facebook} />
     </Article>

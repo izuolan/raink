@@ -61,10 +61,6 @@ const styles = theme => ({
       }
     }
   },
-  active: {
-    // TODO nav active
-    color: theme.navigator.colors.postsListItemLinkHover
-  },
   listItemText: {
     margin: "0 0 0 1.5em",
     color: theme.navigator.colors.postsListItemLink,
@@ -118,7 +114,10 @@ const styles = theme => ({
         display: "none"
       }
     }
-  }
+  },
+  active: {
+    color: theme.navigator.colors.postsListItemLinkHover
+  },
 });
 
 class ListItem extends React.Component {

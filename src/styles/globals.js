@@ -137,11 +137,13 @@ export default {
 
     /**
      * 1. Remove the border on images inside links in IE 10-.
-     * 2. Remove extra space in all browsers
+     * 2. Remove extra space in all browsers.
+     * 3. Avoid large pictures overflow container.
      */
     img: {
       borderStyle: "none" /* 1 */,
-      verticalAlign: "middle" /* 2 */
+      verticalAlign: "middle" /* 2 */,
+      maxWidth: "100%" /* 3 */
     },
 
     /**

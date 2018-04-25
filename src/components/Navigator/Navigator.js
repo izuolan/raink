@@ -108,19 +108,16 @@ const styles = theme => ({
 
 class Navigator extends React.Component {
 
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
+  // handleChange = (event, value) => {
+  //   this.setState({ value });
+  // };
 
-  handleChangeIndex = index => {
-    this.setState({ value: index });
-  };
+  // handleChangeIndex = index => {
+  //   this.setState({ value: index });
+  // };
   
   linkOnClick = e => {
     moveNavigatorAside.bind(this);
-    // TODO This is magic about refresh NavigatorShape when "active".
-    // this.props.setNavigatorShape("closed");
-    // this.props.setNavigatorShape("open");
   };
 
   expandOnClick = e => {

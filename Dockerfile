@@ -9,7 +9,7 @@ RUN npm install --global gatsby-cli && \
     mkdir -p /site
 
 WORKDIR /site
-VOLUME ["/site", "/site/content"]
+VOLUME ["/site", "/site/content", "/public"]
 EXPOSE 8000
 COPY scripts/*.sh /
 

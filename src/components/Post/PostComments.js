@@ -2,6 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import FacebookProvider, { Comments } from "react-facebook";
+import { CommentCount, DiscussionEmbed } from "disqus-react";
+
+import Zoom from 'material-ui/transitions/Zoom';
+import Button from 'material-ui/Button';
+import CommentIcon from 'material-ui-icons/Comment';
+
 require("core-js/fn/array/find");
 
 import config from "../../../content/meta/config";
@@ -11,30 +17,69 @@ const styles = theme => ({
     margin: "3em 0 0",
     padding: "3em 0 0",
     borderTop: `1px solid ${theme.base.colors.lines}`
+  },
+  comments: {
+    zIndex: 1,
+    position: 'fixed',
+    bottom: '6em',
+    right: `calc(${theme.bars.sizes.actionsBar}px + 2em)`,
+    [`@media (max-width: ${theme.mediaQueryTresholds.L}px)`]: {
+      bottom: '5em',
+      right: '6em',
+    }
   }
 });
 
-const PostComments = props => {
-  const { classes, slug, facebook } = props;
+class PostComments extends React.Component {
 
-  return (
-    <div id="post-comments" className={classes.postComments}>
-      {/* <FacebookProvider appId={facebook}>
-        <Comments
-          href={`${config.siteUrl}${slug}`}
-          width="100%"
-          colorscheme={props.theme.main.colors.fbCommentsColorscheme}
-        />
-      </FacebookProvider> */}
-    </div>
-  );
-};
+  render() {
+    const { classes, post, slug, disqus, facebook } = this.props;
+    const { excerpt, frontmatter } = post;
+    const { title } = frontmatter;
+    const url = config.siteUrl + config.pathPrefix + slug;
+    const disqusConfig = {
+      url: url,
+      identifier: slug,
+      title: title,
+    };
+
+    return (
+      <div id="post-comments" className={classes.postComments}>
+        <Zoom in="true" unmountOnExit
+          style={{
+            transitionDelay: 1300,
+          }}
+        >
+          <a href="#post-comments" className={classes.comments}>
+            <Button variant="fab" mini color="secondary">
+              <CommentIcon />
+            </Button>
+          </a>
+        </Zoom>
+        
+        {disqus &&
+          <CommentCount shortname={disqus.shortname} config={disqusConfig} /> &&
+          <DiscussionEmbed shortname={disqus.shortname} config={disqusConfig} />
+        }
+
+        {facebook.appId && <FacebookProvider appId={facebook}>
+          <Comments
+            href={`${config.siteUrl}${slug}`}
+            width="100%"
+            colorscheme={props.theme.main.colors.fbCommentsColorscheme}
+          />
+        </FacebookProvider>}
+      </div>
+    );
+  };
+}
 
 PostComments.propTypes = {
   classes: PropTypes.object.isRequired,
   post: PropTypes.object.isRequired,
   slug: PropTypes.string.isRequired,
   theme: PropTypes.object.isRequired,
+  disqus: PropTypes.object.isRequired,
   facebook: PropTypes.object.isRequired
 };
 

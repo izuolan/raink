@@ -81,11 +81,11 @@ class Contents extends React.Component {
             transitionDelay: 1000,
           }}
         >
-          <Button variant="fab" mini color="primary"
+          <Button variant="fab" color="primary"
             onClick={this.toggleDrawer(true)}
             className={classes.tocButton}
           >
-            <TocIcon />
+            <TocIcon style={{ fontSize: 30 }} />
           </Button>
         </Zoom>
         <Drawer anchor="right" open={this.state.toc} onClose={this.toggleDrawer(false)}>

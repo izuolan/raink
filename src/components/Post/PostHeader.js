@@ -38,6 +38,11 @@ const styles = theme => ({
       fontSize: `${theme.main.fonts.subTitle.sizeL}em`
     }
   },
+  avatar: {
+    marginLeft: ".4em",    
+    width: "1.5em",
+    height: "1.5em",
+  },
   meta: {
     fontSize: `${theme.main.fonts.meta.size}em`,
     fontWeight: theme.main.fonts.meta.weight,
@@ -102,7 +107,14 @@ const PostHeader = props => {
       <h1 className={classes.title}>{title}</h1>
       <h2 className={classes.subTitle}>{subTitle}</h2>
       <div className={classes.meta}>
-        <Chip avatar={<Avatar alt="avatar" src={avatar} />} label={postDate(date)} />
+        <Chip avatar={
+          <Avatar
+            alt="avatar"
+            src={avatar} 
+            className={classes.avatar}
+          />}
+          label={postDate(date)}
+        />
         {tags.map(data => {
           return (
             <Chip

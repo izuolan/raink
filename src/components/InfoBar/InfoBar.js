@@ -10,7 +10,8 @@ import { featureNavigator, moveNavigatorAside } from "./../../utils/shared";
 
 import config from "../../../content/meta/config";
 import avatar from "../../images/avatar.svg";
-import TopMenu from "./TopMenu";
+import SideMenu from "./SideMenu";
+import SocialMenu from "./SocialMenu";
 
 const styles = theme => ({
   infoBar: {
@@ -33,29 +34,24 @@ const styles = theme => ({
       display: "none"
     }
   },
-  title: {
+  titleLink: {
+    fontSize: "1.3em",
     float: "left",
     color: theme.bars.colors.title,
-    margin: "10px 0 0 15px",
+    margin: "0.4em 0 0 .4em",
     "& small": {
       display: "block",
       fontSize: ".65em",
       margin: "2px 0 0 0"
     }
   },
-  titleLink: {
-    marginTop: "4px"
-  },
   avatarLink: {
     display: "block",
     float: "left",
-    margin: "13px 0 0 30px"
+    margin: "0.6em 0 0 0"
   },
   avatar: {
-    backgroundColor: "#FFFFFF",
     width: "36px",
-    borderRadius: "50% 100% 100% 100%",
-    border: `1px solid ${theme.base.colors.lines}`,
     height: "36px"
   }
 });
@@ -69,16 +65,19 @@ class InfoBar extends React.Component {
 
     return (
       <aside className={classes.infoBar}>
+        <SideMenu
+          pages={pages}
+          homeLinkOnClick={this.homeLinkOnClick}
+          pageLinkOnClick={this.pageLinkOnClick}
+        />
         <Link to="/" className={classes.avatarLink} onClick={this.homeLinkOnClick}>
           <Avatar alt={config.infoTitle} src={avatar} className={classes.avatar} />
         </Link>
         <Link to="/" className={classes.titleLink} onClick={this.homeLinkOnClick}>
-          <h3 className={classes.title}>
-            {config.infoTitle}
-            <small>{config.infoTitleNote}</small>
-          </h3>
+          {config.infoTitle}
+          <small>{config.infoTitleNote}</small>
         </Link>
-        <TopMenu
+        <SocialMenu
           pages={pages}
           homeLinkOnClick={this.homeLinkOnClick}
           pageLinkOnClick={this.pageLinkOnClick}

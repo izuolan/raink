@@ -43,10 +43,6 @@ const styles = theme => ({
   avatar: {
     width: "36px",
     height: "36px",
-    backgroundColor: "#FFFFFF",
-    borderRadius: "50% 100% 100% 100%",
-    // boxShadow: "2px 8px 20px -6px hsla(170, 50%, 45%, 1)",
-    border: "1px solid #ddd",
     transition: "all .3s",
     transitionTimingFunction: "ease",
     display: "inline-block",
@@ -64,8 +60,7 @@ const styles = theme => ({
     },
     "@media (hover: hover)": {
       "&:hover": {
-        borderRadius: "50% 100% 100% 100%",
-        boxShadow: "2px 8px 20px -6px hsla(170, 50%, 45%, 1)",
+        filter: 'drop-shadow(3px 2px 4px hsla(170, 50%, 45%, 1))'
       }
     }
   },
@@ -77,6 +72,9 @@ const styles = theme => ({
     float: "left",
     transitionTimingFunction: "ease",
     color: theme.info.colors.text,
+    "&:hover": {
+      color: theme.navigator.colors.postsListItemLinkHover,
+    },
     "& small": {
       display: "block",
       fontSize: ".6em",

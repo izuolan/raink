@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import { MenuItem, MenuList } from "material-ui/Menu";
-import MoreVertIcon from "material-ui-icons/MoreVert";
+import MenuIcon from "material-ui-icons/Menu";
 import IconButton from "material-ui/IconButton";
 import { Manager, Target, Popper } from "react-popper";
 import ClickAwayListener from "material-ui/utils/ClickAwayListener";
@@ -15,7 +15,7 @@ import lang from "../../../content/meta/lang";
 
 const styles = theme => ({
   topMenu: {
-    float: "right",
+    float: "left",
     margin: "5px 10px 0 0",
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {}
   },
@@ -66,7 +66,7 @@ class TopMenu extends React.Component {
               onClick={this.handleClick}
               className={classes.open}
             >
-              <MoreVertIcon />
+              <MenuIcon style={{ fontSize: 30 }} />
             </IconButton>
           </Target>
           <Popper

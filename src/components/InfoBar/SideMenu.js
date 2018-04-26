@@ -75,7 +75,7 @@ class TopMenu extends React.Component {
             className={classNames({ [classes.popperClose]: !open })}
           >
             <ClickAwayListener onClickAway={this.handleClose}>
-              <Grow in={open} id="menu-list" style={{ transformOrigin: "0 0 0" }}>
+              <Grow in={open} id="side-menu" style={{ transformOrigin: "0 0 0" }}>
                 <Paper>
                   <MenuList role="menu">
                     <MenuItem
@@ -97,7 +97,11 @@ class TopMenu extends React.Component {
                         {lang.resume}
                       </MenuItem>
                     </a>
-                    <a href={config.noteUrl} style={{ display: "block" }}>
+                    <a href={config.noteUrl}
+                      style={{ display: "block" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <MenuItem
                         onClick={e => {
                           this.props.pageLinkOnClick(e);

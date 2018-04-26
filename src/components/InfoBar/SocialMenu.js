@@ -98,13 +98,17 @@ class SocialMenu extends React.Component {
             className={classNames({ [classes.popperClose]: !open })}
           >
             <ClickAwayListener onClickAway={this.handleClose}>
-              <Grow in={open} id="menu-list" style={{ transformOrigin: "top right" }}>
+              <Grow in={open} id="social-menu" style={{ transformOrigin: "top right" }}>
                 <Paper>
                   <MenuList role="menu">
                     {items.map(item => {
                       const Icon = icons[item.name];
                       return (
-                        <a href={item.url} style={{ display: "block" }} target="_blank">
+                        <a href={item.url}
+                          style={{ display: "block" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <MenuItem
                             onClick={e => {
                               this.props.pageLinkOnClick(e);

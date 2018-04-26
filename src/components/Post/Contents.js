@@ -27,14 +27,24 @@ const styles = theme => ({
       margin: '.4em',
     },
     "& p": {
-      margin: 0,
-    },
-    "& a": {
+      margin: 2,
       color: theme.base.colors.text,
       "&:hover": {
         color: theme.base.colors.linkHover,
       },
-      
+      [`@media (max-width: ${theme.mediaQueryTresholds.L}px)`]: {
+        margin: 5,
+      }
+    },
+    "& a": {
+      margin: 2,
+      color: theme.base.colors.text,
+      "&:hover": {
+        color: theme.base.colors.linkHover,
+      },
+      [`@media (max-width: ${theme.mediaQueryTresholds.L}px)`]: {
+        margin: 5,
+      }
     },
   },
   tocButton: {
@@ -51,13 +61,12 @@ const styles = theme => ({
 
 class Contents extends React.Component {
   state = {
-    left: false,
-    right: false,
+    toc: false,
   };
 
-  toggleDrawer = (side, open) => () => {
+  toggleDrawer = (open) => () => {
     this.setState({
-      [side]: open,
+      toc: open,
     });
   };
 
@@ -69,23 +78,23 @@ class Contents extends React.Component {
       <div>
         <Zoom in="true" unmountOnExit
           style={{
-            transitionDelay: 0,
+            transitionDelay: 1000,
           }}
         >
           <Button variant="fab" mini color="primary"
-            onClick={this.toggleDrawer('right', true)}
+            onClick={this.toggleDrawer(true)}
             className={classes.tocButton}
           >
             <TocIcon />
           </Button>
         </Zoom>
-        <Drawer anchor="right" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
+        <Drawer anchor="right" open={this.state.toc} onClose={this.toggleDrawer(false)}>
           <div className={classes.tocHeader}>
             {lang.tableOfContents}
           </div>
           <div
-            onClick={this.toggleDrawer('right', false)}
-            onKeyDown={this.toggleDrawer('right', false)}
+            onClick={this.toggleDrawer(false)}
+            onKeyDown={this.toggleDrawer(false)}
             dangerouslySetInnerHTML={{ __html: post.tableOfContents }}
             className={classes.tocList}
           />

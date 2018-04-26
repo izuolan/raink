@@ -50,8 +50,10 @@ class PostComments extends React.Component {
             transitionDelay: 1300,
           }}
         >
-          <a href="#post-comments" className={classes.comments}>
-            <Button variant="fab" mini color="secondary">
+          <a href="#post-comments" aria-label="Comments link" className={classes.comments}>
+            <Button variant="fab" mini color="secondary"
+              aria-label="Go to comments"
+            >
               <CommentIcon />
             </Button>
           </a>

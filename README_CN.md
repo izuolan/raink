@@ -26,6 +26,7 @@ Lighthouse 评分：
 * [x] 社交分享
 * [x] Google analytics
 * [x] Disqus 和 Facebook 评论集成
+* [ ] 滑动隐藏上下栏
 * [ ] 文章标签
 * [ ] 多语言
 * [ ] 桌面级更新提醒

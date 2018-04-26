@@ -82,6 +82,7 @@ class Contents extends React.Component {
           }}
         >
           <Button variant="fab" mini color="primary"
+            aria-label="Table of contents"
             onClick={this.toggleDrawer(true)}
             className={classes.tocButton}
           >

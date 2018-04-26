@@ -26,11 +26,11 @@ Lighthouse score:
 * [x] Social sharing
 * [x] Google analytics
 * [x] Disqus and FB comments
+* [ ] Headroom
 * [ ] Filtering by tag
 * [ ] multi-language
 * [ ] Support PWA notification
 * [ ] Resume page
-* [ ] Dashboard
 
 ## Getting started
 

@@ -25,9 +25,9 @@ Lighthouse 评分：
 * [x] RSS, 站点地图, SEO
 * [x] 社交分享
 * [x] Google analytics
+* [x] Disqus 和 Facebook 评论集成
 * [ ] 文章标签
 * [ ] 多语言
-* [ ] Disqus 和 Facebook 评论集成
 * [ ] 桌面级更新提醒
 * [ ] 简历密码
 * [ ] 博客后台
@@ -47,7 +47,7 @@ ALGOLIA_SEARCH_ONLY_API_KEY = ...
 ALGOLIA_ADMIN_API_KEY = ...
 ALGOLIA_INDEX_NAME = ...
 FB_APP_ID = ...
-DISQUS = ...
+DISQUS_ID = ...
 ```
 
 如果你将网站部署到 [Netlify](https://www.netlify.com/)，那么联系表单不需要任何设置即可使用，提交数据会发送到 Netlify 后台。

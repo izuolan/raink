@@ -25,9 +25,9 @@ Lighthouse score:
 * [x] RSS, Sitemap, SEO
 * [x] Social sharing
 * [x] Google analytics
+* [x] Disqus and FB comments
 * [ ] Filtering by tag
 * [ ] multi-language
-* [ ] Disqus and FB comments
 * [ ] Support PWA notification
 * [ ] Resume page
 * [ ] Dashboard
@@ -47,7 +47,7 @@ ALGOLIA_SEARCH_ONLY_API_KEY = ...
 ALGOLIA_ADMIN_API_KEY = ...
 ALGOLIA_INDEX_NAME = ...
 FB_APP_ID = ...
-DISQUS = ...
+DISQUS_ID = ...
 ```
 
 The contact form does not need any settings it should work out of the box if you deploy the website to [Netlify](https://www.netlify.com/).

@@ -81,7 +81,7 @@ class Contents extends React.Component {
             transitionDelay: 1000,
           }}
         >
-          <Button variant="fab" mini color=""
+          <Button variant="fab" mini color="primary"
             onClick={this.toggleDrawer(true)}
             className={classes.tocButton}
           >

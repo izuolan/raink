@@ -21,11 +21,11 @@ const styles = theme => ({
   comments: {
     zIndex: 1,
     position: 'fixed',
-    bottom: '6em',
-    right: `calc(${theme.bars.sizes.actionsBar}px + 2em)`,
+    bottom: '5em',
+    right: `calc(${theme.bars.sizes.actionsBar}px + 1.5em)`,
     [`@media (max-width: ${theme.mediaQueryTresholds.L}px)`]: {
       bottom: '5em',
-      right: '6em',
+      right: '5em',
     }
   }
 });
@@ -51,7 +51,7 @@ class PostComments extends React.Component {
           }}
         >
           <a href="#post-comments" className={classes.comments}>
-            <Button variant="fab" mini color="secondary">
+            <Button variant="fab" mini color="">
               <CommentIcon />
             </Button>
           </a>

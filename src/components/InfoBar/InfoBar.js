@@ -38,7 +38,7 @@ const styles = theme => ({
     fontSize: "1.3em",
     float: "left",
     color: theme.bars.colors.title,
-    margin: "0.4em 0 0 .4em",
+    margin: "0.5em 0 0 .4em",
     "& small": {
       display: "block",
       fontSize: ".65em",

@@ -86,7 +86,7 @@ class Contents extends React.Component {
             onClick={this.toggleDrawer(true)}
             className={classes.tocButton}
           >
-            <TocIcon style={{ fontSize: 30 }} />
+            <TocIcon />
           </Button>
         </Zoom>
         <Drawer anchor="right" open={this.state.toc} onClose={this.toggleDrawer(false)}>

@@ -51,7 +51,7 @@ const styles = theme => ({
     zIndex: 1,
     position: 'fixed',
     bottom: '1em',
-    right: `calc(${theme.bars.sizes.actionsBar}px + 1em)`,
+    right: '1em',
     [`@media (max-width: ${theme.mediaQueryTresholds.L}px)`]: {
       bottom: '3em',
       right: '1em',

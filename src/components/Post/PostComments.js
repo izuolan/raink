@@ -22,7 +22,7 @@ const styles = theme => ({
     zIndex: 1,
     position: 'fixed',
     bottom: '5em',
-    right: `calc(${theme.bars.sizes.actionsBar}px + 1.5em)`,
+    right: '1.5em',
     [`@media (max-width: ${theme.mediaQueryTresholds.L}px)`]: {
       bottom: '4.55em',
       right: '5em',

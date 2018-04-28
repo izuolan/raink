@@ -21,7 +21,7 @@ const styles = theme => ({
       color: theme.info.colors.text,
       background: theme.info.colors.background,
       position: "absolute",
-      left: 0,
+      left: theme.bars.sizes.actionsBar,
       top: 0,
       width: `${theme.info.sizes.width}px`,
       height: "100%",

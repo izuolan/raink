@@ -40,8 +40,8 @@ const styles = theme => ({
   actionsBar: {
     position: "absolute",
     background: theme.bars.colors.background,
-    left: 0,
-    //top: `calc(100vh - ${theme.bars.sizes.actionsBar}px)`,
+    // left: 0,
+    // top: `calc(100vh - ${theme.bars.sizes.actionsBar}px)`,
     bottom: 0,
     display: "flex",
     flexDirection: "row",
@@ -64,19 +64,26 @@ const styles = theme => ({
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
       flexDirection: "column",
       top: 0,
-      right: 0,
-      left: "auto",
+      left: 0,
+      right: "auto",
       height: "100%",
       padding: `${theme.base.sizes.linesMargin} 0`,
       width: `${theme.bars.sizes.actionsBar}px`,
-      "&::before": {
+      "&::after": {
+        // top: theme.base.sizes.linesMargin,
+        // bottom: theme.base.sizes.linesMargin,
+        // right: 0,
+        // left: "auto",
+        // width: 0,
+        // height: "auto",
+        // borderRight: `1px solid ${theme.base.colors.lines}`
+        content: `""`,
+        position: "absolute",
+        right: 0,
         top: theme.base.sizes.linesMargin,
         bottom: theme.base.sizes.linesMargin,
-        left: 0,
-        right: "auto",
-        width: 0,
-        height: "auto",
-        borderLeft: `1px solid ${theme.base.colors.lines}`
+        width: "1px",
+        borderRight: `1px solid ${theme.base.colors.lines}`
       }
     }
   },

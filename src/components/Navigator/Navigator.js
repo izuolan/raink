@@ -40,12 +40,12 @@ const styles = theme => ({
       "&.is-featured": {
         transition: "left .9s",
         width: `calc(100vw - ${theme.info.sizes.width}px - ${theme.bars.sizes.actionsBar}px)`,
-        left: `${theme.info.sizes.width}px`,
+        left: `calc(${theme.info.sizes.width}px + ${theme.bars.sizes.actionsBar}px)`,
         top: 0
       },
       "&.is-aside": {
         transition: "none, bottom 0.5s",
-        left: 0,
+        left: theme.bars.sizes.actionsBar,
         width: `${theme.info.sizes.width - 1}px`,
         zIndex: 1,
         top: "auto",

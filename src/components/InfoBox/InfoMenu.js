@@ -34,23 +34,28 @@ const styles = theme => ({
       color: theme.info.colors.menuLinkHover
     }
   },
-  buttonLeft: {
+  button: {
     marginTop: ".4em",
     color: theme.info.colors.text,
-  },
-  buttonRight: {
-    marginTop: ".4em",
-    color: theme.info.colors.text,
+    transition: "all .5s",
+    "&:hover": {
+      backgroundColor: "transparent",
+      color: theme.info.colors.menuLinkHover,
+    }
   },
   buttonCenter: {
     margin: ".4em",
+    color: theme.info.colors.text,    
     justifyContent: "center",
     alignItems: "center",
-    color: theme.info.colors.text,
+    transition: "all .5s",
+    "&:hover": {
+      backgroundColor: "transparent",
+      color: theme.info.colors.menuLinkHover
+    }
   },
   buttonIcons: {
     paddingRight: "4px",
-    color: theme.info.colors.text,
   },
   disabled: {
     color: theme.info.colors.icons,
@@ -64,29 +69,29 @@ const InfoMenu = props => {
     <nav className={classes.infoMenu}>
       <Grid container spacing={24}>
         <Grid item xs={6}>
-          <Button href="/" className={classes.buttonLeft}>
+          <Button href="/" className={classes.button}>
             <HomeIcon className={classes.buttonIcons} />{lang.home}
           </Button>
-          <Button href={config.noteUrl} className={classes.buttonLeft}>
+          <Button href={config.noteUrl} className={classes.button}>
             <LibraryBooksIcon className={classes.buttonIcons} />{lang.note}
           </Button>
-          <Button href={config.aboutUrl} className={classes.buttonLeft} onClick={linkOnClick} data-shape="closed">
+          <Button href={config.aboutUrl} className={classes.button} onClick={linkOnClick} data-shape="closed">
             <AccountBoxIcon className={classes.buttonIcons} />{lang.about}
           </Button>
         </Grid>
         {/* TODO Resume page */}
         <Grid item xs={6}>
           <Button href={config.resumeUrl} disabled
-            className={`${classes.buttonRight} ${classes.disabled}`}
+            className={`${classes.button} ${classes.disabled}`}
             onClick={linkOnClick}
             data-shape="closed"
           >
             <WorkIcon className={`${classes.buttonIcons} ${classes.disabled}`} />{lang.resume}
           </Button>
-          <Button href={config.booksUrl} className={classes.buttonRight} onClick={linkOnClick} data-shape="closed">
+          <Button href={config.booksUrl} className={classes.button} onClick={linkOnClick} data-shape="closed">
             <BookIcon className={classes.buttonIcons} />{lang.books}
           </Button>
-          <Button href={config.friendsUrl} className={classes.buttonRight} onClick={linkOnClick} data-shape="closed">
+          <Button href={config.friendsUrl} className={classes.button} onClick={linkOnClick} data-shape="closed">
             <SupervisorAccountIcon className={classes.buttonIcons} />{lang.friends}
           </Button>
         </Grid>

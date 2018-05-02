@@ -88,8 +88,7 @@ const Search = props => {
 
   return (
     <div className={classes.search}>
-      {algolia &&
-        algolia.appId && (
+      {algolia && algolia.appId && (
           <InstantSearch
             appId={algolia.appId}
             apiKey={algolia.searchOnlyApiKey}

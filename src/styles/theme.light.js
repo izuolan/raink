@@ -7,7 +7,7 @@ const theme = createMuiTheme({
     colors: {
       background: {
         color: colors.light_bg,
-        // image: `url(${Backgrtound})`,
+        image: `url(${Background})`,
         position: [0, 0],
         repeat: 'repeat'
       },
@@ -25,12 +25,27 @@ const theme = createMuiTheme({
     },
     fonts: {},
   },
+  bars: {
+    colors: {
+      background: {
+        color: colors.light_bg,
+        image: `url(${Background})`,
+        position: [0, 0],
+        repeat: 'repeat'
+      },
+      title: colors.light_gray
+    },
+    sizes: {
+      actionsBar: 60,
+      infoBar: 60
+    }
+  },
   info: {
     colors: {
       text: colors.light_gray,
       background: {
         color: colors.light_bg,
-        // image: `url(${Backgrtound})`,
+        image: `url(${Background})`,
         position: [0, 0],
         repeat: 'repeat'
       },
@@ -53,7 +68,7 @@ const theme = createMuiTheme({
     colors: {
       background: {
         color: colors.light_bg,
-        // image: `url(${Backgrotund})`,
+        image: `url(${Background})`,
         position: [0, 0],
         repeat: 'repeat'
       },
@@ -73,7 +88,7 @@ const theme = createMuiTheme({
     colors: {
       background: {
         color: colors.light_bg,
-        // image: `url(${Backgrotund})`,
+        image: `url(${Background})`,
         position: [0, 0],
         repeat: 'repeat'
       },
@@ -126,21 +141,6 @@ const theme = createMuiTheme({
         size: 1,
         lineHeight: 1.4
       }
-    }
-  },
-  bars: {
-    colors: {
-      background: {
-        color: colors.light_bg,
-        // image: `url(${Backgtround})`,
-        position: [0, 0],
-        repeat: 'repeat'
-      },
-      title: colors.light_gray
-    },
-    sizes: {
-      actionsBar: 60,
-      infoBar: 60
     }
   },
   footer: {

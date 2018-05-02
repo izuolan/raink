@@ -62,6 +62,7 @@ const styles = theme => ({
   listItemText: {
     margin: "0 0 0 1.5em",
     color: theme.navigator.colors.postsListItemLink,
+    transition: "all .3s",    
     "@media (hover: hover)": {
       "&:hover": {
         color: theme.navigator.colors.postsListItemLinkHover,

@@ -25,6 +25,21 @@ const theme = createMuiTheme({
     },
     fonts: {},
   },
+  bars: {
+    colors: {
+      background: {
+        color: colors.dark_bg,
+        image: `url(${Background})`,
+        position: [0, 0],
+        repeat: 'repeat'
+      },
+      title: colors.dark_gray
+    },
+    sizes: {
+      actionsBar: 60,
+      infoBar: 60
+    }
+  },
   info: {
     colors: {
       text: colors.dark_gray,
@@ -126,21 +141,6 @@ const theme = createMuiTheme({
         size: 1,
         lineHeight: 1.4
       }
-    }
-  },
-  bars: {
-    colors: {
-      background: {
-        color: colors.dark_bg,
-        // image: `url(${Background})`,
-        position: [0, 0],
-        repeat: 'repeat'
-      },
-      title: colors.dark_gray
-    },
-    sizes: {
-      actionsBar: 60,
-      infoBar: 60
     }
   },
   footer: {

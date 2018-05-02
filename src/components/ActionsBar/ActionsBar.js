@@ -70,13 +70,6 @@ const styles = theme => ({
       padding: `${theme.base.sizes.linesMargin} 0`,
       width: `${theme.bars.sizes.actionsBar}px`,
       "&::after": {
-        // top: theme.base.sizes.linesMargin,
-        // bottom: theme.base.sizes.linesMargin,
-        // right: 0,
-        // left: "auto",
-        // width: 0,
-        // height: "auto",
-        // borderRight: `1px solid ${theme.base.colors.lines}`
         content: `""`,
         position: "absolute",
         right: 0,

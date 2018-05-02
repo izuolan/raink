@@ -10,6 +10,16 @@ import TocIcon from 'material-ui-icons/Toc';
 import lang from "../../../content/meta/lang";
 
 const styles = theme => ({
+  tocButton: {
+    zIndex: 1,
+    position: 'fixed',
+    bottom: '1em',
+    right: '1em',
+    [`@media (max-width: ${theme.mediaQueryTresholds.L}px)`]: {
+      bottom: '3em',
+      right: '1em',
+    }
+  },
   tocHeader: {
     margin: '1em',
     justifyContent: "center",
@@ -17,13 +27,16 @@ const styles = theme => ({
     color: "gray"
   },
   tocList: {
-    // minWidth: "15em",
+    maxWidth: "20em",
     "& ul": {
       paddingLeft: "1em",
       listStyle: "none",
       margin: '.4em',
+      position: "relative",
     },
     "& li": {
+      // paddingLeft: ".8em",
+      // borderLeft: "1px dashed #ddd",
       margin: '.4em',
     },
     "& p": {
@@ -42,20 +55,21 @@ const styles = theme => ({
       "&:hover": {
         color: theme.base.colors.linkHover,
       },
+      // "&::before": {
+      //   position: "relative",
+      //   top: 0,
+      //   left: "-8px",
+      //   display: "inline-block",
+      //   width: "10px",
+      //   height: "10px",
+      //   content: `""`,
+      //   borderRadius: "50%",
+      //   backgroundColor: "#1296db",
+      // },
       [`@media (max-width: ${theme.mediaQueryTresholds.L}px)`]: {
         margin: 5,
       }
     },
-  },
-  tocButton: {
-    zIndex: 1,
-    position: 'fixed',
-    bottom: '1em',
-    right: '1em',
-    [`@media (max-width: ${theme.mediaQueryTresholds.L}px)`]: {
-      bottom: '3em',
-      right: '1em',
-    }
   },
 });
 

@@ -60,6 +60,7 @@ typings/
 .cache/
 .DS_Store
 public
+static/icons
 yarn-error.log
 
 # editors

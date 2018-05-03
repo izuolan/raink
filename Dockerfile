@@ -2,7 +2,7 @@ FROM node:slim
 
 RUN npm install --global gatsby-cli && \
     apt-get update && \
-    apt-get install entr libpng-dev -y && \
+    apt-get install entr libpng-dev make g++ python -y && \
     # Clean
     apt-get autoclean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \

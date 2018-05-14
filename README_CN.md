@@ -7,13 +7,9 @@
 * [Netlify 的演示站点](https://raink.netlify.com)
 * [我的博客（使用 Docker 部署）](https://zuolan.me/)
 
-<details><summary>截图</summary>
-
 Lighthouse 评分：
 
-![Lighthouse](https://i.imgur.com/QeO8Gh8.jpg)
-
-</details>
+![Lighthouse](https://i.imgur.com/UNgAOqh.png)
 
 * [x] 文章和页面使用 Markdown 编写
 * [x] 文章目录

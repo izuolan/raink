@@ -7,7 +7,7 @@ const theme = createMuiTheme({
     colors: {
       background: {
         color: colors.light_bg,
-        image: `url(${Background})`,
+        // image: `url(${Background})`,
         position: [0, 0],
         repeat: 'repeat'
       },
@@ -29,7 +29,7 @@ const theme = createMuiTheme({
     colors: {
       background: {
         color: colors.light_bg,
-        image: `url(${Background})`,
+        // image: `url(${Background})`,
         position: [0, 0],
         repeat: 'repeat'
       },
@@ -45,7 +45,7 @@ const theme = createMuiTheme({
       text: colors.light_gray,
       background: {
         color: colors.light_bg,
-        image: `url(${Background})`,
+        // image: `url(${Background})`,
         position: [0, 0],
         repeat: 'repeat'
       },
@@ -68,7 +68,7 @@ const theme = createMuiTheme({
     colors: {
       background: {
         color: colors.light_bg,
-        image: `url(${Background})`,
+        // image: `url(${Background})`,
         position: [0, 0],
         repeat: 'repeat'
       },
@@ -88,7 +88,7 @@ const theme = createMuiTheme({
     colors: {
       background: {
         color: colors.light_bg,
-        image: `url(${Background})`,
+        // image: `url(${Background})`,
         position: [0, 0],
         repeat: 'repeat'
       },

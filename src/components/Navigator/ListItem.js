@@ -115,7 +115,7 @@ const styles = theme => ({
     }
   },
   active: {
-    color: theme.navigator.colors.postsListItemLinkHover
+    // color: theme.navigator.colors.postsListItemLinkHover
   },
 });
 

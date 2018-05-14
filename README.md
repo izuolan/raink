@@ -7,13 +7,9 @@
 * [Netlify Demo](https://raink.netlify.com)
 * [My Blog (Deploy with Docker)](https://zuolan.me/)
 
-<details><summary>Screenshots</summary>
-
 Lighthouse score:
 
-![Lighthouse](https://i.imgur.com/QeO8Gh8.jpg)
-
-</details>
+![Lighthouse](https://i.imgur.com/UNgAOqh.png)
 
 * [x] Markdown posts, pages and fragments
 * [x] Table of contents

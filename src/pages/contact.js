@@ -24,7 +24,7 @@ const Contact = () => {
           <br/>
           {lang.contact_desc}
         </Content>
-        <Form />
+        { config.showContactForm && <Form /> }
       </Article>
     </Main>
   );

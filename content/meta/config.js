@@ -19,6 +19,8 @@ module.exports = {
   aboutUrl: "/about/", // Your about url
   friendsUrl: "/friends/", // Your friends url
   contactUrl: "/contact/", // Your contact url
+  // Contact
+  showContactForm: true,
   // manifest.json
   manifestName: "Zuolan's Blog",
   manifestShortName: "Zuolan", // max 12 characters

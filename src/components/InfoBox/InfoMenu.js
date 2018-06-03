@@ -72,7 +72,7 @@ const InfoMenu = props => {
           <Button href="/" className={classes.button}>
             <HomeIcon className={classes.buttonIcons} />{lang.home}
           </Button>
-          <Button href={config.noteUrl} className={classes.button}>
+          <Button href={config.noteUrl} className={classes.button} onClick={linkOnClick} data-shape="closed">
             <LibraryBooksIcon className={classes.buttonIcons} />{lang.note}
           </Button>
           <Button href={config.aboutUrl} className={classes.button} onClick={linkOnClick} data-shape="closed">

@@ -13,14 +13,14 @@ module.exports = {
   // info
   infoTitle: "左蓝",
   infoTitleNote: "我将开口",
-  noteUrl: "https://note.zuolan.me", // Your notebook url
+  noteUrl: "/notes/", // Your notebook url
   resumeUrl: "", // Your resume url
   booksUrl: "/books/", // Your bookshelf url
   aboutUrl: "/about/", // Your about url
   friendsUrl: "/friends/", // Your friends url
   contactUrl: "/contact/", // Your contact url
   // Contact
-  showContactForm: false,
+  showContactForm: true,
   // manifest.json
   manifestName: "左蓝的博客",
   manifestShortName: "Zuolan", // max 12 characters

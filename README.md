@@ -5,7 +5,7 @@
 ## Preview and feature
 
 * [Netlify Demo](https://raink.netlify.com)
-* [My Blog (Deploy with Docker)](https://zuolan.me/)
+* [My Blog](https://zuolan.me/)
 
 Lighthouse score:
 
@@ -52,7 +52,7 @@ The contact form does not need any settings it should work out of the box if you
 
 #### There are various ways to get started with Raink:
 
-<details><summary>Deploying with Docker (Recommended)</summary>
+<details><summary>Deploying with Docker</summary>
 
 NOTE: Your GatsbyJS site static files will be created into `~/raink/public` automatically.
 
@@ -123,7 +123,7 @@ $ docker run -it --rm \
 
 </details>
 
-<details><summary>Deploying with Netlify (Serverless)</summary>
+<details><summary>Deploying with Netlify (Recommended, Serverless)</summary>
 
 1. Fork this repository, and sign in [Netlify](https://www.netlify.com/).
 2. [Create a new site](https://app.netlify.com/start) and select your forked repository.

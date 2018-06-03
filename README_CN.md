@@ -5,7 +5,7 @@
 ## 预览与功能
 
 * [Netlify 的演示站点](https://raink.netlify.com)
-* [我的博客（使用 Docker 部署）](https://zuolan.me/)
+* [我的博客](https://zuolan.me/)
 
 Lighthouse 评分：
 
@@ -53,7 +53,7 @@ DISQUS_ID = ...
 
 #### 下面有几种不同的方式部署 Raink:
 
-<details><summary>使用 Docker 部署（推荐）</summary>
+<details><summary>使用 Docker 部署</summary>
 
 提醒：你的 Gatsby.js 网站静态文件将自动创建到 `~/raink/public` 中。
 
@@ -124,7 +124,7 @@ $ docker run -it --rm \
 
 </details>
 
-<details><summary>通过 Netlify 部署（不需要服务器）</summary>
+<details><summary>通过 Netlify 部署（推荐, 不需要服务器）</summary>
 
 1. Fork 这个仓库，注册登录 [Netlify](https://www.netlify.com/)。
 2. 点击 [Create a new site](https://app.netlify.com/start) 然后选择你刚才 forked 的仓库。

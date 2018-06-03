@@ -9,5 +9,5 @@ mv meta pages parts posts raink/content
 # Build
 cd raink
 npm install --global gatsby-cli
-yarn install
+npm install
 gatsby build

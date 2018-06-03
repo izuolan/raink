@@ -2,9 +2,9 @@
 # Exit the script on any command with non 0 return code
 set -e
 
-export GATSBY_DIR="/site"
 mkdir -p ./static/icons
-cd $GATSBY_DIR
+# export GATSBY_DIR="/site"
+# cd $GATSBY_DIR
 
 # Generate favicons
 npx sharp -i ./static/favicon.png -o ./static/icons/favicon-16x16.png resize 16

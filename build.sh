@@ -8,4 +8,6 @@ mkdir -p raink/content
 mv meta pages parts posts raink/content
 # Build
 cd raink
+npm install --global gatsby-cli
+yarn install
 gatsby build

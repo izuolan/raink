@@ -127,9 +127,24 @@ class Books extends React.Component {
                     {books.map(book => {
                       return (
                         <Grid item>
-                          <ButtonBase href={book.url} focusRipple key={book.title} className={classes.image}>
+                          <ButtonBase focusRipple
+                            href={book.url}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            key={book.title}
+                            className={classes.image}
+                          >
+                            { book.coverUrl &&
+                              <span className={classes.imageSrc}
+                                style={{
+                                  backgroundImage: `url(${book.coverUrl})`
+                                }}
+                              />
+                            }
                             <span className={classes.imageSrc}
-                              style={{ backgroundImage: `url(${book.cover})` }}
+                              style={{
+                                backgroundImage: `url(https://img1.doubanio.com/mpic/${book.doubanID}.jpg)`
+                              }}
                             />
                             <span className={classes.imageBackdrop} />
                             <span className={classes.imageButton}>

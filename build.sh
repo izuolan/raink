@@ -1,5 +1,6 @@
 #!/bin/bash
 # Clone master
+rm -rf raink
 git clone https://github.com/izuolan/raink
 # Clean default content
 rm -rf raink/content

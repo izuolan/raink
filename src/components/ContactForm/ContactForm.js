@@ -130,6 +130,7 @@ class ContactForm extends React.Component {
           className={classes.multilineInput}
         />
         <input name="bot-field" style={{ display: "none" }} />
+        <div data-netlify-recaptcha></div>
         <Button
           variant="raised"
           color="primary"

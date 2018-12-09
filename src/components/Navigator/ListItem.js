@@ -8,13 +8,15 @@ import lang from "../../../content/meta/lang";
 
 const styles = theme => ({
   listItem: {
-    margin: "0 0 .7em 0",
+    margin: "0 0 0em 0",
+    // margin: "0 0 .7em 0",
+    // backgroundColor: "#FFF",
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-      margin: "0 0 1.5rem 0"
+      margin: "0 0 0 0rem"
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
       ".moving-featured &, .is-aside &": {
-        margin: "0 0 .4rem 0"
+        margin: "0 0 0rem 0"
       }
     }
   },

@@ -154,4 +154,4 @@ $ yarn develop
 
 ## Thanks
 
-**Note: This starter forked from an [educational project](https://forgatsby.greglobinski.com/gatsby-starter-personal-blog/). Some features will be merged into the original project in the future (My code seems terrible, lol).**
+**Note: This starter forked from an [educational project](https://github.com/greglobinski/gatsby-starter-personal-blog). Some features will be merged into the original project in the future (My code seems terrible, lol).**

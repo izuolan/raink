@@ -1,5 +1,6 @@
 module.exports = {
   light_bg: "#F0F0D8",
+  // light_bg: "#EEEEEE",
   light_base_text: "#333333",
   light_accent: "#58B2DC",
   light_gray: "#555555",

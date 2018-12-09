@@ -85,6 +85,7 @@ Date.prototype.format = function(fmt) {
 
 const PostHeader = props => {
   const { classes, title, subTitle, date, tags } = props;
+  // const ffdate = date.replace(/[^0-9]/g,"/"); // Firefox date format
   const ago = parseInt((new Date() - (new Date(date)))/86400000);
 
   function postDate(dateString) {

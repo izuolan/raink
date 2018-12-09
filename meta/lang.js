@@ -30,7 +30,7 @@ module.exports = {
     search: "搜索",
     // Contact
     email_to_me: "您可以通过电子邮件联系我（即时收到）：",
-    contact_desc: "您也可以通过我的 Telegram（https://t.me/zuolan）账号联系到我，或者使用下面表单联系我（信息会直接发往我的邮箱）。",
+    contact_desc: "您也可以通过我的 Telegram (https://t.me/zuolan) 账号联系到我，或者使用下面表单联系我（信息会直接发往我的邮箱）。",
     send: "发送",
     network_error: "网络错误",
     field_required: "此输入框必填",

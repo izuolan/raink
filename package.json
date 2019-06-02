@@ -33,7 +33,7 @@
     "gatsby-plugin-svgr": "^1.0.0",
     "prettier": "^1.10.2",
     "sharp-cli": "^1.7.0",
-    "webpack-bundle-analyzer": "^2.10.0"
+    "webpack-bundle-analyzer": ">=3.3.2"
   },
   "dependencies": {
     "color": "^3.0.0",
